@@ -1,27 +1,17 @@
-# Laravel PHP Framework
+# Word Slang Dictionary
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Ini merupakan website yang memiliki fungsi sebagai kamus slang Indonesia.
+Tujuan website ini adalah untuk memudahkan pengguna dalam mengetahui relasi suatu kata slang dengan kata similar yang lainnya
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Penggunaan
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Ada beberapa poin yang perlu diperhatikan setelah meng-clone repo ini:
+1. Versi PHP yang dimiliki harus 5.6
+2. Pada app > Http > Controller.php, ada beberapa syntax yang harus diubah:
+	1. Pada syntax:
+		exec("/usr/local/bin/python /Users/Kaemsitumorang/TA_AMS/public/w2v.py '{$slang_word}'", $output, $return);
+		Ubah path python serta file w2v.py yang terdapat di folder public
+	2. Model yang digunakan pada repo ini (terdapat di Controllers.php) masih menggunakan model yang lama, file yang baru dapat diambil melai drive yang telah kami share. Replace model tersebut, dan rename sesuai nama model yang sebelumnya.
+	Model yang baru terlalu besar ukurannya bila disimpan di git.
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
